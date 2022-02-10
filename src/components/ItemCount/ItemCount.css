@@ -1,0 +1,31 @@
+.contador {
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+        " restar stock sumar "
+        " enviar enviar enviar ";
+}
+.valorContador {
+    grid-area: stock;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.btnIncDec {
+    width: 10px;
+    background-color: transparent !important;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+.btnInc {
+    grid-area: sumar;
+}
+.btnDec {
+    grid-area: restar;
+}
+.btnAgregar {
+    grid-area: enviar;
+}

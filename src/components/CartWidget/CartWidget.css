@@ -1,0 +1,14 @@
+.carrito {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3rem;
+}
+.carrito svg {
+    width: 2em;
+    height: 2em;
+    color: white
+}
+.carrito svg:hover {
+    color: #3182CE
+}
