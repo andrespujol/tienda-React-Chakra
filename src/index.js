@@ -6,8 +6,8 @@ import { ChakraProvider } from '@chakra-ui/react'
 
 ReactDOM.render(
   <ChakraProvider>
-  <App />
-</ChakraProvider>
+    <App />
+  </ChakraProvider>
 ,
   document.getElementById('root')
 );

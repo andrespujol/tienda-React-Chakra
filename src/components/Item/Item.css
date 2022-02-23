@@ -1,0 +1,10 @@
+.card {
+    width: 30%;
+    margin: 1rem;
+}
+.cardImg {
+    width: 100% ;
+}
+.cardDesc {
+    height: 10vh;
+}

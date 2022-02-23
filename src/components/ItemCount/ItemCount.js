@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 import { Button } from '@chakra-ui/react'
 import './ItemCount.css'
 
-export const ItemCount = ({stock, initial, onAdd}) => {
-    const [contador, setContador] = useState(0)
+export const ItemCount = ({stock, initial, onAdd, color}) => {
+    const [contador, setContador] = useState(1)
+
+
+
     const incrementar = () => {
         if(contador < stock) {
             setContador(contador + 1)
