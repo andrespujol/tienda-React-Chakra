@@ -1,11 +1,11 @@
-.contador {
+.countContainer {
     display: grid;
     width: 100%;
     grid-template-areas: 
-        " restar stock sumar "
-        " enviar enviar enviar ";
+        " decrease stock increase "
+        " confirm confirm confirm ";
 }
-.valorContador {
+.count {
     grid-area: stock;
     text-align: center;
     display: flex;
@@ -21,11 +21,15 @@
     font-size: 1.5rem;
 }
 .btnInc {
-    grid-area: sumar;
+    grid-area: increase;
+    margin-right: 5px;
 }
 .btnDec {
-    grid-area: restar;
+    grid-area: decrease;
+    margin-left: 5px;
 }
-.btnAgregar {
-    grid-area: enviar;
+#btnConfirm {
+    grid-area: confirm;
+    background: #1C3144;
+    color: #fff;
 }

@@ -3,25 +3,30 @@ import { useParams } from 'react-router-dom';
 import "./ItemListContainer.css";
 import { Spinner, Flex } from '@chakra-ui/react'
 import { ItemList } from "../ItemList/ItemList";
+import { getProducts, getProductsByCategory } from '../../data/asyncMock'
+
 
 export const ItemListContainer = ({ greeting }) => {
-    const [producto, setProducto] = useState([]);
+    const [productos, setProductos] = useState([]);
     const [loading, setLoading] = useState(true);
     const { categoryId } = useParams()
 
     useEffect(() => {
-        setTimeout(() => {
-        const items = async () => {
-            const data = await fetch(
-            "https://mocki.io/v1/1c56aa8a-d8a8-4bde-9081-e16b334aa8c8"
-            );
-            const prod = await data.json();
-            setProducto(prod);
-            setLoading(false)
-        };
-        items();
-        }, 2000);
-    }, [categoryId]);
+        if (categoryId) {
+          setTimeout(() => {
+            getProductsByCategory(categoryId).then((products) => {
+                setProductos(products);
+                console.log(products)
+              setLoading(false);
+            });
+          }, 2000);
+        } else {
+          getProducts().then((products) => {
+            setProductos(products);
+            setLoading(false);
+          });
+        }
+      }, [categoryId]);
 
     return loading ? 
         <Flex align="center" justify="center">
@@ -35,9 +40,9 @@ export const ItemListContainer = ({ greeting }) => {
             />
         </Flex> : 
         (
-            <div>
+            <section className="products">
                 <h1 className="titulo">{greeting}</h1>
-                <ItemList producto={producto} />
-            </div>
+                <ItemList productos={productos} />
+            </section>
         );
 };

@@ -1,10 +1,46 @@
 .card {
-    width: 30%;
+    width: 90%;
     margin: 1rem;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.card-secOne {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(28,49,68, 0.5);
+    margin-bottom: 1rem;
+    height: 3rem;
 }
 .cardImg {
     width: 100% ;
+    border-radius: 5px;
 }
 .cardDesc {
     height: 10vh;
+}
+.card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+.card-secTwo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+.card-price, .card-detail {
+    width: 50%;
+}
+.card-price {
+    margin-left: 5px;
+}
+.card-detail {
+    background-color: #1C3144;
+    height: 3rem;
+    border-radius: 5px;
+    color: #fff;
 }

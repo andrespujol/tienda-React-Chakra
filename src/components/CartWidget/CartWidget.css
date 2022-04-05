@@ -1,14 +1,36 @@
-.carrito {
+.cart {
+    display: none !important;
     width: 30%;
     display: flex;
     justify-content: flex-end;
     margin-right: 3rem;
 }
-.carrito svg {
+.cart svg {
     width: 2em;
     height: 2em;
     color: white
 }
-.carrito svg:hover {
+.cart svg:hover {
     color: #3182CE
+}
+.cartBtn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid  #fff;
+    border-radius: 5px;
+    width: 4rem;
+}
+.cartQuantity {
+    color: #000;
+}
+@media only screen and (min-width: 769px) {
+    .cart {
+        display: flex !important;
+    }
+    .cartQuantity {
+        color: #fff;
+        padding-top: 5px;
+        font-size: 1.2rem;
+    }
 }

@@ -5,27 +5,29 @@ import { ItemDetail } from '../ItemDetail/ItemDetail'
 import { Spinner, Flex } from '@chakra-ui/react'
 import { getProduct } from '../../data/asyncMock'
 
+
 export const ItemDetailContainer = () => {
-    const [producto, setProducto] = useState([]);
+    const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
     const { productId } = useParams()
 
 
     useEffect(() => {
         getProduct(productId).then(item => {
-            setProducto(item)
+            setProduct(item)
         }).catch(err  => {
             console.log(err)
         }).finally(() => {
             setLoading(false)
         })
-
         return (() => {
-            setProducto()
+            setProduct()
         })
 
     }, [productId])
     
+
+
     return loading ? 
         <Flex align="center" justify="center">
             <Spinner
@@ -39,7 +41,7 @@ export const ItemDetailContainer = () => {
         </Flex> : 
         (
             <div className="containerDetail">            
-            <ItemDetail producto={producto}/>
+            <ItemDetail {...product}/>
         </div>) 
         
 };

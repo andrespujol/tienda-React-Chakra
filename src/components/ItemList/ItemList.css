@@ -1,5 +1,12 @@
 .cardSection {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    width: 100%;
+}
+
+@media only screen and (min-width: 481px) {
+    .cardSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }

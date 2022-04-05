@@ -1,0 +1,30 @@
+.cartEmpty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.cartEmpty p {
+    margin-bottom: 1rem;
+}
+button {
+    height: 3rem;
+    border-radius: 5px;
+}
+.cartFull {
+    display: none;
+}
+/* .itemGrid {
+    text-decoration: underline;
+} */
+@media only screen and (min-width:769px) {    
+    .cartFullMobile {
+        display: none;
+    }
+    .cartFull {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

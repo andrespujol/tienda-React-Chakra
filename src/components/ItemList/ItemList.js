@@ -2,12 +2,14 @@ import React from 'react'
 import { Item } from '../Item/Item'
 import './ItemList.css'
 
-export const ItemList = ({producto}) => {
+export const ItemList = ({productos}) => {
 
 
   return (
     <section className='cardSection'>
-        {producto.map(item => (<Item key={item.id} {...item}/>))}
+          {productos.map((product) => (
+        <Item key={product.id} {...product} />
+      ))}
     </section>
   )
 }
