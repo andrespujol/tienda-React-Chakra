@@ -2,39 +2,40 @@ import React, { useState, useContext } from "react";
 import { Box, Button } from '@chakra-ui/react'
 import './Item.css'
 import { Link } from "react-router-dom";
-import { FcLikePlaceholder, FcLike } from 'react-icons/fc';
-import CartContext from '../../Context/CartContext'
+// import { FcLikePlaceholder, FcLike } from 'react-icons/fc';
+// import CartContext from '../../Context/CartContext'
 // import { WishItems } from "../WishItems/WishItems";
 
 export const Item = ({ id, title, price, pictureUrl, category, description }) => {
-  const [quantity, setQuantity] = useState(0)
-  const { clearWished, wishItem } = useContext(CartContext)
+  // const [quantity, setQuantity] = useState(0)
+  // const { clearWished, wishItem } = useContext(CartContext)
 
-  const likedItem = (product) => {
-    setQuantity(product)
-    const desiredProduct = {
-      id,
-        title,
-        price,
-        quantity,
-        pictureUrl,
-        category
-    }
-    console.log(desiredProduct)
-    wishItem( desiredProduct, quantity)
-    // if (quantity > 0) {
+//   const likedItem = (product) => {
+//     setQuantity(product)
+//     const desiredProduct = {
+//       id,
+//         title,
+//         price,
+//         quantity,
+//         pictureUrl,
+//         category
+//     }
+//     console.log(desiredProduct)
+//     wishItem( desiredProduct, quantity)
+//     // if (quantity > 0) {
 
-    // }else {
-    //   clearWished()
-    // }
-}
+//     // }else {
+//     //   clearWished()
+//     // }
+// }
 
   return (
     // Sample card from Airbnb
       <Box 
         boxShadow='2xl' 
-        w="90%"
-        m="0 auto"  
+        // w="90%"
+        // m="0 auto"  
+        className="cardContainer"
         mb="1rem"
         borderRadius="5px"
         bg='white'
